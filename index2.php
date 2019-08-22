@@ -115,6 +115,11 @@ if(mysqli_num_rows($result) == 1)
 	  
 	  <center><div class="des" style="border-radius:25px; width:50%"><a href="addnews.php" style="text-decoration:none" > <center><h4 style="font-family: Impact">Change News Feed</h4></a></center></div>
       <br><br>
+
+  
+    
+    <center><div class="des" style="border-radius:25px; width:50%"><a href="contacted.php" style="text-decoration:none" > <center><h4 style="font-family: Impact">See Conatacted us</h4></a></center></div>
+      <br><br>
 	  <?php }
       
        ?>
