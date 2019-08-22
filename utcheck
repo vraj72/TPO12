@@ -1,0 +1,66 @@
+<?php
+session_start();
+
+include("includes/config.php"); 
+
+if(isset($_SESSION['login_admin']))
+  $username = $_SESSION['login_admin'];
+else if(isset($_SESSION['login_student']))
+  $username=$_SESSION['login_student'];
+
+
+$sql="select * from application where stu_id= '$username' ";
+$result = mysqli_query($con,$sql);
+if(mysqli_num_rows($result) == 11)
+{
+  $_SESSION['registered'] = $username;
+   // $login2=$_SESSION['login2'];
+}
+
+
+
+/*function choose()
+	{
+		if(document.forms["indel"].db[0].checked == true)
+		{
+			"<?php echo "vnb"?>"
+			"<?php 
+				foreach($_POST['rollno'] as $k_rollno=>$v_rollno)
+				{
+					echo "edff";
+					$rollno = $v_rollno;
+					$branch = $_POST['branch'];
+					$sql = "INSERT INTO undertaking(branch,rollno)VALUES('$branch','$rollno')";
+					$result = mysqli_query($con,$sql);
+				}
+				/*if($result)
+				{
+					?>" 
+					alert("Added");
+					"<?php  
+				}
+				?>"
+		}
+		if(document.forms["indel"].db[1].checked == true)
+		{
+			"<?php
+				foreach($_POST['rollno'] as $k_rollno=>$v_rollno)
+				{
+					$rollno = $v_rollno;
+					$branch = $_POST['branch'];
+					$sql1 = "DELETE FROM undertaking WHERE branch='$branch' AND rollno='$rollno'";
+
+					$result1 = mysqli_query($con,$sql1);
+				}
+				/*if($result1)
+				{
+					?>" 
+					alert("Deleted");
+					"<?php  
+				}
+				?>"
+					
+		}
+	}
+	</script>	
+*/
