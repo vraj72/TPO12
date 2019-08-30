@@ -32,7 +32,7 @@ if(mysqli_num_rows($result) == 1)
   <body>    
 	<a href="Homee.php" style="text-decoration:none">
 	<div class="heads">
-		<img id="logo" src="logo1.png">
+		<img id="logo" src="img/logo1.png">
 		<h1>Training and Placement Cell</h1>
 	        <p>Don Bosco Institute of Technology, Kurla</p>
 		<br>

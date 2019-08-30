@@ -1,16 +1,7 @@
 <!doctype html>
 <?php
-	$servername = "localhost";
-$username = "viraj";
-$password = "qwerty";
-$dbname = "dbit2";
+	include("includes/config.php");
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$username = $_POST['username'];
 		$password = $_POST['password'];
@@ -19,7 +10,7 @@ if (!$conn) {
 		$branch = $_POST['branch'];	
 		$email = $_POST['email'];
 		$status = "allowed";
-		$result = mysqli_query($conn,"SELECT branch,rollno FROM undertakingcheck WHERE branch = '$branch' AND rollno = '$rollno'");
+		$result = mysqli_query($con,"SELECT branch,rollno FROM undertakingcheck WHERE branch = '$branch' AND rollno = '$rollno'");
 		if (mysqli_num_rows($result)>0){
 			echo "<script>alert('Please Submit the Undertaking Form'); </script>";
 			$status="reject";
@@ -28,12 +19,14 @@ if (!$conn) {
 			
 		$sql = "INSERT INTO student (sr_no, stu_id, password, name, rollno, branch, email, status) VALUES (1, '$username', '$password', '$fullname', 
 		'$rollno', '$branch', '$email', '$status')";
-		if (mysqli_query($conn, $sql)) {
+		if (mysqli_query($con, $sql)) {
 			echo "<script>alert('User Registered Successfully!Please Sign In');
 			document.location.href='Homee.php';</script>";
 		} 
 		else {
-			echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+			?><script type="text/javascript">
+				alert("Already registered with this ID");
+			</script><?php
 		}	
 		}
 	}
@@ -53,7 +46,7 @@ if (!$conn) {
 	<body>
 		<a href="Homee.php" style="text-decoration:none">
 			<div class="heads">
-				<img id="logo" src="logo1.png">
+				<img id="logo" src="img/logo1.png">
 				<h1>Training and Placement Cell</h1>
 				<p>Don Bosco Institute of Technology, Kurla</p>
 				<br>

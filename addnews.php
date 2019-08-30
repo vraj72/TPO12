@@ -15,15 +15,6 @@ if(mysqli_num_rows($result) == 1)
    // $login2=$_SESSION['login2'];
 
 }
-if (!empty($_POST['new'])) 
-{
-	$Arrival = $_POST['Arrival'];
-	$Content = $_POST['Content'];
-
-	$sql = "INSERT INTO newsfeed(Arrival,Content)VALUES('$Arrival','$Content')";
-
-	$result = mysqli_query($con,$sql);
-}
 	
 ?>
 
@@ -41,7 +32,7 @@ if (!empty($_POST['new']))
   <body>    
 	<a href="Homee.php" style="text-decoration:none">
 	<div class="heads">
-		<img id="logo" src="logo1.png">
+		<img id="logo" src="img/logo1.png">
 		<h1>Training and Placement Cell</h1>
 	        <p>Don Bosco Institute of Technology, Kurla</p>
 		<br>
@@ -103,19 +94,33 @@ if (!empty($_POST['new']))
       		</div>
     	</div>
 		
-		<form onsubmit="">
-	<center>
-				<label class="control-label col-sm-2" for="content" style="font-size:20px">Content</label>
-	<input type="text"  name="content" id="content" style="width:900px;margin-left:20px; margin-top:10px;height:40px;"  >
+		<form method="GET">
+    MARQUEE:<input type="text" name="marquee">
+    <input type="submit" value="INSERT">
+  </form>
+<?php 
+error_reporting(0);
+$mar = $_GET['marquee'];
+$timestamp = date("Y-m-d H:i:s");
+$sql="INSERT INTO newsfeed VALUES ('$mar','$timestamp')";
 
-	<br><br>
-	<br>
-	<br>
-	
-	 <input type="submit"  style="width:400px"  class="btn btn-lg btn-primary btn-block"  name="new" value="Submit">
-	</center>
+mysqli_query($con,$sql);
 
-	</form>
+ ?>
+ <form method="post" action="">
+<input type="submit" id='delete' class='delete' name="delete" value='Truncate' ></input>
+</form>
+<?php  
+  if(isset($_POST['delete'])){
+$query = "TRUNCATE TABLE `newsfeed` "; 
+$result = mysqli_query($con,$query);
+function phpAlert($msg) {
+    echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+}
+ phpAlert(   "News Feeds Deleted. "   );  
+
+}
+?>
 <br>
       <br>
     <div class="panel panel-default panel-footer" style="background-color:#80cbff; color:white">

@@ -97,7 +97,7 @@ if(mysqli_num_rows($result) == 1)
 	<div class="container"><br>
 		<div class="col-md-4">
 		    <div class="hovereffect">
-			<img class="img-responsive" src="10_big.jpg" style="height:200px; width:100%" alt="">
+			<img class="img-responsive" src="img/10_big.jpg" style="height:200px; width:100%" alt="">
 			<div class="overlay">
 			   <h2>The Institute</h2>
 			   <a class="info" href="ADInstitute.php">link here</a>
@@ -107,7 +107,7 @@ if(mysqli_num_rows($result) == 1)
 
 		<div class="col-md-4">
 		    <div class="hovereffect">
-			<img class="img-responsive" src="mission-and-vision-statement.jpg" style="height:200px; width:100%" alt="">
+			<img class="img-responsive" src="img/mission-and-vision-statement.jpg" style="height:200px; width:100%" alt="">
 			<div class="overlay">
 			   <h2>Vision and Mission</h2>
 			   <a class="info" href="ADVision.php">link here</a>
@@ -117,7 +117,7 @@ if(mysqli_num_rows($result) == 1)
 		
 		<div class="col-md-4">
 		    <div class="hovereffect">
-			<img class="img-responsive" src="history.jpg" style="height:200px; width:100%" alt="">
+			<img class="img-responsive" src="img/history.jpg" style="height:200px; width:100%" alt="">
 			<div class="overlay">
 			   <h2>History</h2>
 			   <a class="info" href="ADHistory.php">link here</a>

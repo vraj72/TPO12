@@ -31,7 +31,7 @@ if(mysqli_num_rows($result) == 1)
   <body>    
 	<a href="Homee.php" style="text-decoration:none">
 	<div class="heads">
-		<img id="logo" src="logo1.png">
+		<img id="logo" src="img/logo1.png">
 		<h1>Training and Placement Cell</h1>
 	        <p>Don Bosco Institute of Technology, Kurla</p>
 		<br>
@@ -99,7 +99,7 @@ if(mysqli_num_rows($result) == 1)
 					<h2>&nbsp;T&P Officer</h2>
 				</div>
 		</div>
-		<br><!img src="TPO.jpg" hspace="20" style="float:right" width="25%" height=25%"/>
+		<br><!img src="img/TPO.jpg" hspace="20" style="float:right" width="25%" height=25%"/>
 		<p><br>
 		<b>Mr. BharatKumar Bhandary</b> , Training & Placement officer (DBIT) is an experienced industry professional and presently heading 
    		 T&P Cell of Don Bosco Institute Of Technology (Mumbai) .
@@ -122,7 +122,7 @@ if(mysqli_num_rows($result) == 1)
 			<div class="col-md-6" >
 				<div class="section">
 					<h3>Dept. of Mechanical Engineering</h3>
-					<img src="atul.jpg" style="float:right;width:20%;height:20%">
+					<img src="img/atul.jpg" style="float:right;width:20%;height:20%">
 					<p><b>Mr.Atul Lohar</b><br><br>
 					<b>Degree:</b>BE ,M.Tech (Production)<br>
 					<b>Teaching Experience:</b> 1 year<br>
@@ -138,7 +138,7 @@ if(mysqli_num_rows($result) == 1)
 			<div class="col-md-6">
 				<div class="section">
 					<h3>Dept. of Information Technology</h3>
-					<img src="udaynayak.jpg" style="float:right;width:20%;height:20%">
+					<img src="img/udaynayak.jpg" style="float:right;width:20%;height:20%">
 					<p><b>Mr.Uday Nayak</b><br><br>
 					<b>Degree:</b>MS (Master of Science) in Computer Science (2002)
 					University of Toledo, OHIO, USA<br>
@@ -156,7 +156,7 @@ if(mysqli_num_rows($result) == 1)
 			<div class="col-md-6">
 				<div class="section">
 					<h3>Dept. of Computer Science</h3>
-					<img src="kalpita.jpg" style="float:right;width:20%;height:20%">
+					<img src="img/kalpita.jpg" style="float:right;width:20%;height:20%">
 					<p><b>Mrs.Kalpita K</b><br><br>
 					<b>Degree:</b>  M.Tech (Computer Engineering) <br>
 					<b>Teaching Experience:</b> 15 years<br>
@@ -172,7 +172,7 @@ if(mysqli_num_rows($result) == 1)
 			<div class="col-md-6">
 				<div class="section">
 					<h3>Dept. of Electronics and Telecommunication</h3>
-					<!img src="sample.jpg" style="float:right;width:20%;height:20%">
+					<!img src="img/sample.jpg" style="float:right;width:20%;height:20%">
 					<p><b>Ms.Anjum Khan</b><br><br>
 					<b>Degree:</b>BE, ME(Electronics and Telecommunication)<br>
 					<b>Teaching Experience:</b> 15 years<br>

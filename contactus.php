@@ -87,7 +87,7 @@ if(mysqli_num_rows($result) == 1)
  <div class="container">
 		<center>
 		<a href="https://www.google.co.in/maps/place/Don+Bosco+Institute+Of+Technology/@19.0813686,72.8869326,17z/data=!3m1!4b1!4m2!3m1!1s0x3be7c8866a456c9f:0x8d1745d15baac575">
-		<img src="donbosco.png" height="20%" width="70%"></a>
+		<img src="img/donbosco.png" height="20%" width="70%"></a>
 		</center>
 	</div><br><br>
 	<br><br>

@@ -481,7 +481,8 @@ else if($altrue)
    
     <div class="form-group">
     <label class="control-label col-sm-2" for="content" style="font-size:20px">Branch:</label>
-   <select multiple name="branch[]" id="get">
+   <select  name="branch[]" id="get">
+  <option selected hidden>Choose </option>
   <option value="IT">IT</option>
   <option value="COMPS">COMPS</option>
   <option value="EXTC">EXTC</option>

@@ -45,7 +45,7 @@ if(mysqli_num_rows($result) == 1)
   <body>    
 	<a href="Homee.php" style="text-decoration:none">
 	<div class="heads">
-		<img id="logo" src="logo1.png">
+		<img id="logo" src="img/logo1.png">
 		<h1>Training and Placement Cell</h1>
 	        <p>Don Bosco Institute of Technology, Kurla</p>
 		<br>
@@ -391,21 +391,13 @@ fclose($file);
 <center>
 <br>
 <select id="year_option" name="graduation">
-<option value="null">year</option>
-<option value="2005">2005</option>
-<option value="2006">2006</option>
-<option value="2007">2007</option>
-<option value="2008">2008</option>
-<option value="2009">2009</option>
-<option value="2010">2010</option>
-<option value="2011">2011</option>
-<option value="2012">2012</option>
-<option value="2013">2013</option>
-<option value="2014">2014</option>
-<option value="2015">2015</option>
-<option value="2016">2016</option>
-<option value="2017">2017</option>
+<?php
+for($i =date("Y")-5; $i < date ("Y")+5 ; $i++){
 
+	echo '<option value="'.$i.'">'.$i.'</option>';
+
+}
+?>
 
 </select><br><br>
 			
@@ -492,7 +484,7 @@ fclose($file);
 		<td><br><center>10 Std % and Board*</center><br></td>
 		<td><center>
 			
-			<input type="number" name="X" min="35" max="100" required></input> &nbsp&nbsp <input type="text" name="Xboard" pattern="[a-zA-z]+" required></input>
+			<input type="number" name="X" min="35" max="100" placeholder="Percentage" required></input> &nbsp&nbsp <input type="text" placeholder="Board" name="Xboard" pattern="[a-zA-z]+"  required></input>
 			
 		</center>
 		</td>
@@ -501,7 +493,7 @@ fclose($file);
 		<td><br><center>12 Std % and Board</center><br></td>
 		<td><center>
 			
-			<input type="number" name="XII" min="35" max="100"></input> &nbsp&nbsp <input type="text" name="XIIboard" pattern="[a-zA-z]+" required></input>
+			<input type="number" name="XII" min="35" max="100" placeholder="Percentage"></input> &nbsp&nbsp <input type="text" placeholder="Board" name="XIIboard" pattern="[a-zA-z]+" required></input>
 			
 		</center>
 		</td>
@@ -510,7 +502,7 @@ fclose($file);
 		<td><br><center>Diploma % and Board</center><br></td>
 		<td><center>
 			
-			<input type="number" name="Dip" min="40" max="100"></input> &nbsp&nbsp <input type="text" name="Dipboard" pattern="[a-zA-z]+"></input>
+			<input type="number" name="Dip" min="40" max="100" placeholder="Percentage"></input> &nbsp&nbsp <input type="text" placeholder="Board" name="Dipboard" pattern="[a-zA-z]+"></input>
 			
 		</center>
 		</td>
@@ -534,7 +526,7 @@ fclose($file);
 		<td><br><center>No of KTs</center><br></td>
 		<td><center>
 			
-			<br>Live: <input type="number" name="LKTs" min="1" max="20"></input> <br><br>Dead:<input type="number" name="DKTs" min="1" max="20"></input>
+			<br>Live: <input type="number" name="LKTs" min="0" max="20"></input> <br><br>Dead:<input type="number" name="DKTs" min="0" max="20"></input>
 			
 		</center>
 		</td>
@@ -583,7 +575,7 @@ fclose($file);
 		<td><br><center>Aadhar number</center><br></td>
 		<td><center>
 			
-			<input type="text" name="aadhaar"  pattern="[0-9]{12}"></input>
+			<input type="text" name="aadhaar" placeholder="12 digit" pattern="[0-9]{12}"></input>
 			
 		</center>
 		</td>

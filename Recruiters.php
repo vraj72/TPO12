@@ -65,21 +65,34 @@ if(mysqli_num_rows($result) == 1)
                         labels: year,
                         datasets: [
                             {
-                                label: year,
+                                label: 'Student number',
                                 backgroundColor: color,
                                 borderColor: '#46d5f1',
                                 hoverBackgroundColor: '#CCCCCC',
                                 hoverBorderColor: '#666666',
-                                data: student
+                                data: student,
+                                
                             }
                         ]
                     };
 
                     var graphTarget = $(can);
+                    var options = {
+    scaleBeginAtZero: false
+};
 
                     var barGraph = new Chart(graphTarget, {
-                        type: 'pie',
-                        data: chartdata
+                        type: 'bar',
+                        data: chartdata,
+						options: {
+						    scales: {
+						      yAxes: [{
+						        ticks: {
+						          beginAtZero: true
+						        }
+						      }]
+						    }
+						  }
                     });
                 });
             }
@@ -115,7 +128,7 @@ if(mysqli_num_rows($result) == 1)
 
     <a href="Homee.php" style="text-decoration:none">
 	<div class="heads">
-		<img id="logo" src="logo1.png">
+		<img id="logo" src="img/logo1.png">
 		
 		<h1>Training and Placement Cell</h1>
 	        <p>Don Bosco Institute of Technology, Kurla</p>
@@ -188,117 +201,117 @@ if(mysqli_num_rows($result) == 1)
 
 
 <tr> 
-	<td style="cellpadding:20; margin-left:20px" ><div class="container12"><img class='image_hover' src="TCS logo.jpg" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px" ><div class="container12"><img class='image_hover' src="img/TCS logo.jpg" hspace="20" height="200px" width="250px">
 																			<canvas id="graphCanvasTCS" class="graphCanvasClass"></canvas></div></td>
 	
-	<td style="cellspacing:20; margin-left:20px"><div class="container12"><img class='image_hover'src="capgemini.jpg" hspace="20" height="200px" width="250px">
+	<td style="cellspacing:20; margin-left:20px"><div class="container12"><img class='image_hover'src="img/capgemini.jpg" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvascapeg" class="graphCanvasClass"></canvas></div></td>
 	
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img src="MindCraft.jpg" class='image_hover' hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img src="img/MindCraft.jpg" class='image_hover' hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvasmindcraft" class="graphCanvasClass"></canvas></div></td>
 </tr>
 
 
 <tr>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="HSBC.png" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/HSBC.png" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvashsbc" class="graphCanvasClass"></canvas></div></td>
 	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="cactus.jpeg" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvascactus" class="graphCanvasClass"></canvas></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="polaris.jpg" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/polaris.jpg" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvaspolaris" class="graphCanvasClass"></canvas></div></td>
 </tr>
 
 
 <tr>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="rave.jpg" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/rave.jpg" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvasrave" class="graphCanvasClass"></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="LnT.jpg" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/LnT.jpg" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvaslnt" class="graphCanvasClass"></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="infosys.png" hspace="20" height="100px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/infosys.png" hspace="20" height="100px" width="250px">
 	<canvas id="graphCanvasinfosys" class="graphCanvasClass"></div></td>
 </tr>
 
 
 <tr>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="hettich.PNG" hspace="20" height="150px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/hettich.PNG" hspace="20" height="150px" width="250px">
 		<canvas id="graphCanvashettich" class="graphCanvasClass"></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="oberoi.png" hspace="20" height="100px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/oberoi.png" hspace="20" height="100px" width="250px">
 	<canvas id="graphCanvasoberoi" class="graphCanvasClass"></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="ibm.jpg" hspace="20" height="100px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/ibm.jpg" hspace="20" height="100px" width="250px">
 	<canvas id="graphCanvasibm" class="graphCanvasClass"></div></td>
 </tr>
 
 
 <tr>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="reliance.jpg" hspace="20" height="150px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/reliance.jpg" hspace="20" height="150px" width="250px">
 	<canvas id="graphCanvasreliance" class="graphCanvasClass"></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="IGATE.jpg" hspace="20" height="100px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/IGATE.jpg" hspace="20" height="100px" width="250px">
 	<canvas id="graphCanvasigate" class="graphCanvasClass"></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="zycus.jpg" hspace="20" height="150px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/zycus.jpg" hspace="20" height="150px" width="250px">
 	<canvas id="graphCanvaszycus" class="graphCanvasClass"></div></td>
 </tr>
 <tr>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="godrej-infotech-logo.png" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/godrej-infotech-logo.png" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvasgodrej" class="graphCanvasClass"></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="Quinnox.jpg" hspace="20" height="150px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/Quinnox.jpg" hspace="20" height="150px" width="250px">
 	<canvas id="graphCanvasquinnox" class="graphCanvasClass"></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="national_stock_exchange_logo.png" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/national_stock_exchange_logo.png" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvasnsel" class="graphCanvasClass"></div></td>
 </tr>
 <tr>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="toyo.jpg" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/toyo.jpg" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvastoyo" class="graphCanvasClass"></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="ncdex.jpg" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/ncdex.jpg" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvasncdex" class="graphCanvasClass"></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="huawei(1).png" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/huawei(1).png" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvashuawei" class="graphCanvasClass"></div></td>
 </tr>
 <tr>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="taj.png" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/taj.png" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvastaj" class="graphCanvasClass"></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="Chemplast-Sanmar.jpg" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/Chemplast-Sanmar.jpg" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvaschem" class="graphCanvasClass"></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="tibco.png" hspace="20" height="100px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/tibco.png" hspace="20" height="100px" width="250px">
 	<canvas id="graphCanvastibco" class="graphCanvasClass"></div></td>
 </tr>
 <tr>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="hafele.png" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/hafele.png" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvashafele" class="graphCanvasClass"></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="techmah.jpg" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/techmah.jpg" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvastechmah" class="graphCanvasClass"></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="Directi.png" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/Directi.png" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvasdirecti" class="graphCanvasClass"></div></td>
 </tr>
 <tr>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="abo.png" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/abo.png" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvasabo" class="graphCanvasClass"></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="deliotte.jpg" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/deliotte.jpg" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvasdeliotte" class="graphCanvasClass"></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="hp.png" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/hp.png" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvashp" class="graphCanvasClass"></div></td>
 </tr>
 <tr>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="elgi.png" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/elgi.png" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvaselgi" class="graphCanvasClass"></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="atos.jpg" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/atos.jpg" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvasatos" class="graphCanvasClass"></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="jacobs.png" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/jacobs.png" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvasjacobs" class="graphCanvasClass"></div></td>
 </tr>
 <tr>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="merilent.png" hspace="20" height="50px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/merilent.png" hspace="20" height="50px" width="250px">
 	<canvas id="graphCanvasmerilent" class="graphCanvasClass"></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="bms.jpg" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/bms.jpg" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvasbms" class="graphCanvasClass"></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="vistaar.png" hspace="20" height="100px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/vistaar.png" hspace="20" height="100px" width="250px">
 	<canvas id="graphCanvasvistaar" class="graphCanvasClass"></div></td>
 </tr>
 <tr>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="bosch.png" hspace="20" height="90px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/bosch.png" hspace="20" height="90px" width="250px">
 	<canvas id="graphCanvasbosch" class="graphCanvasClass"></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="viteos.png" hspace="20" height="90px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/viteos.png" hspace="20" height="90px" width="250px">
 	<canvas id="graphCanvasviteos" class="graphCanvasClass"></div></td>
-	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="regada.png" hspace="20" height="200px" width="250px">
+	<td style="cellpadding:20; margin-left:20px"><div class="container12"><img class='image_hover' src="img/regada.png" hspace="20" height="200px" width="250px">
 	<canvas id="graphCanvasregada" class="graphCanvasClass"></div></td>
 </tr>
 </table>

@@ -3,6 +3,7 @@ session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include("includes/config.php");
+
 if(isset($_SESSION['login_admin']))
 $username = $_SESSION['login_admin'];
 else if(isset($_SESSION['login_student']))
@@ -103,7 +104,7 @@ $(document).ready(function(){
     
 	var clickEvent = false;
 	$('#myCarousel').carousel({
-		interval:   1000	
+		interval:   5000	
 	}).on('click', '.list-group li', function() {
 			clickEvent = true;
 			$('.list-group li').removeClass('active');
@@ -134,13 +135,12 @@ $(window).load(function() {
   <body>    
 	<a href="Homee.php" style="text-decoration:none">
 	<div class="heads">
-		<img id="logo" src="logo1.png">
+		<img id="logo" src="img/logo1.png">
 		<h1>Training and Placement Cell</h1>
 	        <p>Don Bosco Institute of Technology, Kurla</p>
 		<br>
 		</a>
 	</div> 
-	
 
 	<br>
 	<div class="nav nav-tabs">
@@ -198,9 +198,10 @@ $(window).load(function() {
 
 
 	<br>
-		
-	 <marquee scrolldelay="" behavior="" style="" name="slid" id="slid" > <b> <h4> &lt;&lt;&lt;<input type="text" N.ews Feed : Infosys coming to DBIT soon.</h4></b> </marquee> 
 	
+	<?php
+include("marquee.php");
+  ?>
 	<!--  <marquee scrollamount="" width="40">&lt;&lt;&lt;</marquee> News Feed <marquee scrollamount="5" direction="right" width="40">&gt;&gt;&gt;</marquee>
 	-->
 	<?php 
@@ -235,7 +236,7 @@ $(window).load(function() {
     <div class="carousel-inner" role="listbox">
 
       <div class="item active">
-        <img src="03.jpg" alt="3" width="460" height="345">
+        <img src="img/03.jpg" alt="3" width="460" height="345">
         <div class="carousel-caption">
           <h3><a href="http://www.dbit.in" class="linktext">Don Bosco Institute of Technology, Kurla</a> </h3>
           <p>Know about our institution </p>
@@ -243,7 +244,7 @@ $(window).load(function() {
       </div>
 
       <div class="item">
-        <img src="02.jpg" alt="2" width="460" height="345">
+        <img src="img/02.jpg" alt="2" width="460" height="345">
         <div class="carousel-caption">
           <h3></h3>
           <p></p>
@@ -251,14 +252,14 @@ $(window).load(function() {
       </div>
     
       <div class="item">
-        <img src="05.jpg" alt="5" width="460" height="345">
+        <img src="img/05.jpg" alt="5" width="460" height="345">
         <div class="carousel-caption">
           
         </div>
       </div>
 
       <div class="item">
-        <img src="04.jpg" alt="4" width="460" height="345">
+        <img src="img/04.jpg" alt="4" width="460" height="345">
         <div class="carousel-caption">
           <h3> <a href="#" class="linktext">Know from our students</a></h3>
           <p></p>

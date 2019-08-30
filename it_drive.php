@@ -44,7 +44,7 @@ tr:nth-child(even){background-color: #f2f2f2}
   <body>    
   <a href="Homee.php" style="text-decoration:none">
   <div class="heads">
-    <img id="logo" src="logo1.png">
+    <img id="logo" src="img/logo1.png">
     <h1>Training and Placement Cell</h1>
           <p>Don Bosco Institute of Technology, Kurla</p>
     <br>
@@ -185,8 +185,8 @@ echo "</center>";
    echo "</pre>";*/
    
    
-$filename='file_IT'.strtotime(date('Y-m-d')).'.csv';
-$fp=fopen($filename,'w');
+$filename=strtotime(date('Y-m-d')).'.csv';
+$fp=fopen($filename ,'w');
 
 foreach($arr as $fields)
 {

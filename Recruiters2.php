@@ -65,34 +65,21 @@ if(mysqli_num_rows($result) == 1)
                         labels: year,
                         datasets: [
                             {
-                                label: 'Student number',
+                                label: year,
                                 backgroundColor: color,
                                 borderColor: '#46d5f1',
                                 hoverBackgroundColor: '#CCCCCC',
                                 hoverBorderColor: '#666666',
-                                data: student,
-                                
+                                data: student
                             }
                         ]
                     };
 
                     var graphTarget = $(can);
-                    var options = {
-    scaleBeginAtZero: false
-};
 
                     var barGraph = new Chart(graphTarget, {
-                        type: 'bar',
-                        data: chartdata,
-						options: {
-						    scales: {
-						      yAxes: [{
-						        ticks: {
-						          beginAtZero: true
-						        }
-						      }]
-						    }
-						  }
+                        type: 'pie',
+                        data: chartdata
                     });
                 });
             }
