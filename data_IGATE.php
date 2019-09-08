@@ -1,8 +1,6 @@
 <?php
-    
-$urlParams = explode('/', $_SERVER['REQUEST_URI']);
-$functionName = $urlParams[2];
-$functionName($urlParams[3]);
+$company=end(explode("/", $_SERVER['REQUEST_URI']));
+abc($company);
 
 function abc($company){
 include("includes/config.php");

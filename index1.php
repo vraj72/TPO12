@@ -61,7 +61,7 @@ if(mysqli_num_rows($result) == 1)
         			<li><a href="ADInstitute.php">About DBIT</a></li>
           			<li><a href="Academics.php">T&P cell</a></li>
 				<li><a href="Recruiters.php"> Recruiters </a></li>
-          			<li><a href="Placements2015.php">Placement Records</a></li>
+          			<li><a href="Placements_general.php?year=2015">Placement Records</a></li>
 	  			<li><a href="contactus.php">Contact Us</a></li>
                     	  			<?php 
 				   if(isset($_SESSION['login_admin']) || isset($_SESSION['login_student']))
@@ -435,10 +435,14 @@ for($i =date("Y")-5; $i < date ("Y")+5 ; $i++){
 		<td><br><center>Department*</center><br></td>
 		<td>
 		<center>	
-			<input type="radio" name="dept">Information Technology<br></input>
-			<input type="radio" name="dept">Mechanical</input><br>
-			<input type="radio" name="dept">Electronics and Telecommunication<br></input>
-			<input type="radio" name="dept">Computer<br></input>
+			<select>
+				<option selected hidden>Choose One</option>
+				<option>Information Technology</option>
+				<option>Mechanical</option>
+				<option>Electronics and Telecommunication</option>
+				<option>Computer</option>
+			</select>
+
 		</center>
 		</td>
 		</tr>

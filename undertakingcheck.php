@@ -89,7 +89,7 @@ if(mysqli_num_rows($result) == 1)
         			<li><a href="ADInstitute.php">About DBIT</a></li>
           			<li><a href="Academics.php">T&P Cell</a></li>
 				<li><a href="Recruiters.php">Recruiters</a></li>
-          			<li><a href="Placements2015.php">Placement Records</a></li>
+          			<li><a href="Placements_general.php?year=2015">Placement Records</a></li>
 	  			<li><a href="contactus.php">Contact Us</a></li>
 				                    <?php 
 				   if(isset($_SESSION['login_admin']) || isset($_SESSION['login_student']))
@@ -264,6 +264,7 @@ if(mysqli_num_rows($result) == 1)
 		 <div class="form-group">
 		<label class="control-label col-sm-2" for="content" style="font-size:20px">Branch:</label>
 			<select name="branch" id="get">
+			<option selected hidden>Choose One</option>
 			<option value="IT">IT</option>
 			<option value="COMPS">COMPS</option>
 			<option value="EXTC">EXTC</option>

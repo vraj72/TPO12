@@ -52,7 +52,7 @@ $login3 = isset($_SESSION['login3']);
         			<li><a href="ADInstitute.php">About DBIT</a></li>
           			<li><a href="Academics.php">T&P cell</a></li>
 				<li><a href="Recruiters.php"> Recruiters </a></li>
-          			<li><a href="Placements2015.php">Placement Records</a></li>
+          			<li><a href="Placements_general.php?year=2015">Placement Records</a></li>
 	  			<li><a href="contactus.php">Contact Us</a></li>
                     
                     <?php 

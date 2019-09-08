@@ -436,6 +436,29 @@ INSERT INTO `undertakingcheck` (`branch`, `rollno`) VALUES
 ('IT', 8),
 ('IT', 4);
 
+
+
+--
+-- Table structure for table `newsfeed`
+--
+
+DROP TABLE IF EXISTS `newsfeed`;
+CREATE TABLE IF NOT EXISTS `newsfeed` (
+  `Content` varchar(100) NOT NULL,
+  `datetime` timestamp NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `newsfeed`
+--
+
+INSERT INTO `newsfeed` (`Content`, `datetime`) VALUES
+('', '2019-08-27 23:47:37'),
+('infosys coming DBIT', '2019-08-27 23:47:48');
+
+-- --------------------------------------------------------
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+

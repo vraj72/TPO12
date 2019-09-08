@@ -60,7 +60,7 @@ tr:nth-child(even){background-color: #f2f2f2}
               <li><a href="ADInstitute.php">About DBIT</a></li>
                 <li><a href="Academics.php">T&P Cell</a></li>
         <li><a href="Recruiters.php">Recruiters</a></li>
-                <li><a href="Placements2015.php">Placement Records</a></li>
+                <li><a href="Placements_general.php?year=2015">Placement Records</a></li>
           <li><a href="contactus.php">Contact Us</a></li>
         <?php 
            if(isset($_SESSION['login_admin']) || isset($_SESSION['login_student']))

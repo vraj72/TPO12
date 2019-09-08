@@ -48,7 +48,7 @@ if(mysqli_num_rows($result) == 1)
         			<li><a href="ADInstitute.php">About DBIT</a></li>
           			<li><a href="Academics.php">T&P Cell</a></li>
 				<li><a href="Recruiters.php">Recruiters</a></li>
-          			<li><a href="Placements2015.php">Placement Records</a></li>
+          			<li><a href="Placements_general.php?year=2015">Placement Records</a></li>
 	  			<li><a href="contactus.php">Contact Us</a></li>
 				
 				                    <?php 
@@ -94,10 +94,13 @@ if(mysqli_num_rows($result) == 1)
       		</div>
     	</div>
 		
-		<form method="GET">
+		<form method="GET"><center>
+      <br><br>
     MARQUEE:<input type="text" name="marquee">
     <input type="submit" value="INSERT">
+    </center>
   </form>
+  <br>
 <?php 
 error_reporting(0);
 $mar = $_GET['marquee'];
@@ -108,7 +111,9 @@ mysqli_query($con,$sql);
 
  ?>
  <form method="post" action="">
+  <center>
 <input type="submit" id='delete' class='delete' name="delete" value='Truncate' ></input>
+</center>
 </form>
 <?php  
   if(isset($_POST['delete'])){
