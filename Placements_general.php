@@ -13,11 +13,47 @@ $result = mysqli_query($con,$sql);
 if(mysqli_num_rows($result) == 1)
 {
                 $_SESSION['registered'] = $username;
-   // $login2=$_SESSION['login2'];
 
 }}
 $year=$_GET['year'];
 $year1=$year-1999; 
+
+
+
+if(isset($_POST["upload"]))
+{
+ if($_FILES['Upload_format']['name'])
+ {
+  $filename = explode(".", $_FILES['Upload_format']['name']);
+  if(end($filename) == "csv")
+  {
+      $handle = fopen($_FILES['Upload_format']['tmp_name'], "r");
+   while($data = fgetcsv($handle))
+   {
+    $name = mysqli_real_escape_string($con, $data[0]);
+    $branch = mysqli_real_escape_string($con, $data[1]);  
+    $company = mysqli_real_escape_string($con, $data[2]);
+    $year = mysqli_real_escape_string($con, $data[3]);
+    $query = "
+     INSERT INTO placed_info (stud_name , branch , company , year) VALUES ('$name','$branch','$company','$year')";
+    mysqli_query($con, $query);
+   }
+   fclose($handle);
+  }
+  else
+  {
+    echo '<script type="text/javascript">alert("Upload CSV# File")</script>';
+  }
+ }
+ else
+ {
+  echo '<script type="text/javascript">alert("Upload File")</script>';
+ }
+ }
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -108,11 +144,27 @@ $year1=$year-1999;
       ?>
       <li><a href="Placements_general.php?year=<?php echo $rows['year']?>" >Placements <?php echo $rows['year']." - "; echo $rows['year']-1999; ?></a></li>
       <?php
-              }
+              } ?>
+              </ul><?php
+
+
+               if(isset($_SESSION['login_admin']))
+                        {                           
               ?> 
-  </ul>
- </span>
+              <br>
+              <h4>ADD New Data</h4>
+              
+              <a href="Upload_format.csv" style="background: lightblue;">Get CSV Format</a>
+              <br><br>
+              <form method="post" enctype='multipart/form-data'>
+              <input type="file" name="Upload_format" style="background: lightblue"/><br>
+              <input type="submit" name="upload" value="upload" />
+              </form>
+             
+          <?php }
+ ?>
   
+ </span>
 <span class="col-md-9">
 <center>
 <h3>Placements <?php echo $year; echo " - "; echo $year1; ?></h3>
